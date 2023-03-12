@@ -8,6 +8,7 @@ const SECRET='9d0993439adfcca037ad457e2b489ebf76fd6efabda9a1e83b2353e76525c21451
 // @route   GET /users
 // @access  private
 const getUsers=async (req,res)=>{
+    console.log("calling getusers function")
     try{
         const users=await User.find().select('-password').lean()
         res.status(200).json({success:true,count:users.length,data:users})
