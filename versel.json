@@ -8,9 +8,15 @@
   ],
   "routes": [
     {
-    
-      "src": "/",
-    
+      "src": "/users",
+      "dest": "index.js"
+    },
+    {
+      "src": "/contacts",
+      "dest": "index.js"
+    },
+    {
+      "src": "/(.*)",
       "dest": "index.js"
     }
   ]
